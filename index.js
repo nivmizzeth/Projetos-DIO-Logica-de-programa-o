@@ -11,13 +11,18 @@
 //git commit -m "msg"
 //git push
 
-function pares(numero){
-    
-    if (numero % 2 === 0){
-        console.log(numero + " Este número é par.")
+let notas = [5, 7, 8, 4, 6]
+let somaAprovado = 0
+let somaReprovado = 0
+
+for (let i = 0; i < notas.length; i++) {
+    let media = notas[i]
+
+    if (media >= 6) {
+        somaAprovado += 1
     } else {
-        console.log(numero + " Este número é impar.")
+        somaReprovado += 1
     }
 }
 
-pares(98)
+console.log(`${somaAprovado} foram aprovados e ${somaReprovado} foram reprovados`)
