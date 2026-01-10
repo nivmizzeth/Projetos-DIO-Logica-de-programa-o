@@ -11,6 +11,7 @@
 //git commit -m "msg"
 //git push
 
+//Ex exercicio dificuldade 1.
 let notas = [5, 7, 8, 4, 6]
 let somaAprovado = 0
 let somaReprovado = 0
