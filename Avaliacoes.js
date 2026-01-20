@@ -15,7 +15,7 @@ function calcularMedia(notas) {
     return mediaNotas
 }
 
-function calcularNegativa(notas, limite) {
+function somarNegativa(notas, limite) {
     let notasNegativas = 0
     
     for (let i = 0; i < notas.length; i++ ) {
@@ -28,7 +28,7 @@ function calcularNegativa(notas, limite) {
     return notasNegativas
 }
 
-function calcularMaiorNota(notas) {
+function buscarMaiorNota(notas) {
     let maiorNota = -Infinity
 
     for (let i = 0; i < notas.length; i++) {
@@ -41,7 +41,7 @@ function calcularMaiorNota(notas) {
     return maiorNota
 }
 
-function calcularMenorNota(notas) {
+function buscarMenorNota(notas) {
     let menorNota = Infinity
     
     for (let i = 0; i < notas.length; i++) {
@@ -55,9 +55,9 @@ function calcularMenorNota(notas) {
 }
 
 const mediaNotas = calcularMedia(avaliacoes)
-const notasNegativas = calcularNegativa(avaliacoes, avaliacaoNegativa)
-const maiorNota = calcularMaiorNota(avaliacoes)
-const menorNota = calcularMenorNota(avaliacoes)
+const notasNegativas = somarNegativa(avaliacoes, avaliacaoNegativa)
+const maiorNota = buscarMaiorNota(avaliacoes)
+const menorNota = buscarMenorNota(avaliacoes)
 
 console.log(`Nota média do aplicativo: ${mediaNotas.toFixed(0)}`)
 console.log(`Quantidade de avaliações negativas: ${notasNegativas}`)
